@@ -1,0 +1,39 @@
+// Windows 11 Compatibility Check Results from registry - Configuration Mof
+
+#pragma namespace ("\\\\.\\root\\cimv2")
+#pragma deleteclass("Win11Compatibility", NOFAIL)
+[DYNPROPS]
+Class Win11Compatibility
+{
+[key] string KeyName;
+String AllResult;
+String AllResultReason;
+String OSDiskSize;
+String OSDiskSizeStatus;
+String CPUName;
+String CPUNameStatus;
+String MemorySize;
+String MemorySizeStatus;
+String TPMVer;
+String TPMVerStatus;
+String SecBoot;
+String SecBootStatus;
+};
+
+[DYNPROPS]
+Instance of Win11Compatibility
+{
+KeyName="Win11Compat";
+[PropertyContext("Local|HKEY_LOCAL_MACHINE\\SYSTEM\\Win11Compat|AllResult"),Dynamic,Provider("RegPropProv")] AllResult;
+[PropertyContext("Local|HKEY_LOCAL_MACHINE\\SYSTEM\\Win11Compat|AllResultReason"),Dynamic,Provider("RegPropProv")] AllResultReason;
+[PropertyContext("Local|HKEY_LOCAL_MACHINE\\SYSTEM\\Win11Compat|OSDiskSize"),Dynamic,Provider("RegPropProv")] OSDiskSize;
+[PropertyContext("Local|HKEY_LOCAL_MACHINE\\SYSTEM\\Win11Compat|OSDiskSizeStatus"),Dynamic,Provider("RegPropProv")] OSDiskSizeStatus;
+[PropertyContext("Local|HKEY_LOCAL_MACHINE\\SYSTEM\\Win11Compat|CPUName"),Dynamic,Provider("RegPropProv")] CPUName;
+[PropertyContext("Local|HKEY_LOCAL_MACHINE\\SYSTEM\\Win11Compat|CPUNameStatus"),Dynamic,Provider("RegPropProv")] CPUNameStatus;
+[PropertyContext("Local|HKEY_LOCAL_MACHINE\\SYSTEM\\Win11Compat|MemorySize"),Dynamic,Provider("RegPropProv")] MemorySize;
+[PropertyContext("Local|HKEY_LOCAL_MACHINE\\SYSTEM\\Win11Compat|MemorySizeStatus"),Dynamic,Provider("RegPropProv")] MemorySizeStatus;
+[PropertyContext("Local|HKEY_LOCAL_MACHINE\\SYSTEM\\Win11Compat|TPMVer"),Dynamic,Provider("RegPropProv")] TPMVer;
+[PropertyContext("Local|HKEY_LOCAL_MACHINE\\SYSTEM\\Win11Compat|TPMVerStatus"),Dynamic,Provider("RegPropProv")] TPMVerStatus;
+[PropertyContext("Local|HKEY_LOCAL_MACHINE\\SYSTEM\\Win11Compat|SecBoot"),Dynamic,Provider("RegPropProv")] SecBoot;
+[PropertyContext("Local|HKEY_LOCAL_MACHINE\\SYSTEM\\Win11Compat|SecBootStatus"),Dynamic,Provider("RegPropProv")] SecBootStatus;
+};

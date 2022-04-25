@@ -1,0 +1,21 @@
+// Windows 11 Compatibility Check Results from registry
+
+#pragma namespace ("\\\\.\\root\\cimv2\\SMS")
+#pragma deleteclass("Win11Compatibility", NOFAIL)
+[SMS_Report(TRUE),SMS_Group_Name("Win11Compatibility"),SMS_Class_ID("Win11Compatibility")]
+Class Win11Compatibility: SMS_Class_Template
+{
+[SMS_Report(TRUE),key] string KeyName;
+[SMS_Report(TRUE)] String AllResult;
+[SMS_Report(TRUE)] String AllResultReason;
+[SMS_Report(TRUE)] String OSDiskSize;
+[SMS_Report(TRUE)] String OSDiskSizeStatus;
+[SMS_Report(TRUE)] String CPUName;
+[SMS_Report(TRUE)] String CPUNameStatus;
+[SMS_Report(TRUE)] String MemorySize;
+[SMS_Report(TRUE)] String MemorySizeStatus;
+[SMS_Report(TRUE)] String TPMVer;
+[SMS_Report(TRUE)] String TPMVerStatus;
+[SMS_Report(TRUE)] String SecBoot;
+[SMS_Report(TRUE)] String SecBootStatus;
+};
